@@ -5,6 +5,7 @@ Feature: Test information in geico
     When enter firstname"<firstname>" and lastname"<lastname>"
     Then enter address"<address>"
     When enter zipcod "<zip_code>" and enter date_of_birth"<date of birth>"
+    When Click submit botton
     Then close application
 
     Examples: 

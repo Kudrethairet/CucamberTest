@@ -28,32 +28,36 @@ public class smokeTest {
 
 	@When("^enter firstname\"(.*?)\" and lastname\"(.*?)\"$")
 	public void enter_firstname_and_lastname(String firstname, String lastname) throws Throwable {
-		//enter first name
+		// enter first name
 		driver.findElement(By.cssSelector("#firstName")).sendKeys(firstname);
-		//enter last name
+		// enter last name
 		driver.findElement(By.cssSelector("#lastName")).sendKeys(lastname);
 	}
 
 	@Then("^enter address\"(.*?)\"$")
 	public void enter_address(String address) throws Throwable {
-		//enter address
+		// enter address
 		driver.findElement(By.cssSelector("#street")).sendKeys(address);
 	}
+
 	@When("^enter zipcod \"(.*?)\" and enter date_of_birth\"(.*?)\"$")
 	public void enter_zipcod_and_enter_date_of_birth(String zipcode, String dateofbirth) throws Throwable {
-	    //enter zip number
+		// enter zip number
 		driver.findElement(By.cssSelector("#zip")).sendKeys(zipcode);
-		//enter date of birth
+		// enter date of birth
 		driver.findElement(By.cssSelector("#date-monthdob")).sendKeys(dateofbirth);
-		
-		
+
+	}
+
+	@When("^Click submit botton$")
+	public void click_submit_botton() throws Throwable {
+		driver.findElement(By.cssSelector("#btnSubmit")).click();
 	}
 
 	@Then("^close application$")
 	public void close_application() throws Throwable {
-		Thread.sleep(3*1000);
+		Thread.sleep(3 * 1000);
 		driver.quit();
 	}
-
 
 }
