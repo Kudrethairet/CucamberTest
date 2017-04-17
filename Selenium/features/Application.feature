@@ -6,6 +6,7 @@ Feature: Test information in geico
     Then enter address"<address>"
     When enter zipcod "<zip_code>" and enter date_of_birth"<date of birth>"
     When Click submit botton
+    Then Verify the title
     Then close application
 
     Examples: 

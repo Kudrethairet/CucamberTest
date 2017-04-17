@@ -2,6 +2,7 @@ package StepDefination;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.xerces.util.SynchronizedSymbolTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,6 +12,9 @@ import com.gargoylesoftware.htmlunit.ThreadedRefreshHandler;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import org.junit.Assert;
+import org.junit.Assert.*;
 
 public class smokeTest {
 
@@ -52,6 +56,15 @@ public class smokeTest {
 	@When("^Click submit botton$")
 	public void click_submit_botton() throws Throwable {
 		driver.findElement(By.cssSelector("#btnSubmit")).click();
+		Thread.sleep(3*1000);
+	}
+	
+	@Then("^Verify the title$")
+	public void verify_the_title() throws Throwable {
+	   String title =  driver.findElement(By.cssSelector(".location-headline.section-header")).getText();
+	    //System.out.println(title);
+	    Assert.assertEquals(title, "Vehicle Details");
+	   // (title, "Vehicle Details");
 	}
 
 	@Then("^close application$")
