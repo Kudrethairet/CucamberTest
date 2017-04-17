@@ -14,4 +14,4 @@ Feature: Test information in geico
       | Mike      | Json     | Honey Bee Way |    20111 |      07281994 |
       | Sarea     | Jhon     | Honey Bee Way |    20151 |      10201998 |
       | Peter     | Wang     | Barbely Hill  |    22031 |      01261989 |
-      | Steven    | King     | Hollywood     |    20112 |      07251978 |
+      | Sunny     | Huan     | London ST     |    20112 |      04251997 |
